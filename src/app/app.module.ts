@@ -7,6 +7,13 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule } from '@angular/forms';
 import { StarComponent } from './star/star.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const router: Routes = [
+  { path: 'productList', component: ProductListComponent },
+  { path: 'productDetail', component: ProductDetailComponent }
+]
+
 
 @NgModule({
   declarations: [
@@ -18,7 +25,8 @@ import { StarComponent } from './star/star.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(router)
   ],
   providers: [],
   bootstrap: [AppComponent]
