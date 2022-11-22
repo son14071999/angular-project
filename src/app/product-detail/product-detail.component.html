@@ -1,0 +1,22 @@
+<div>
+  <form action="" (ngSubmit)="changeDetail(detailForm)" #detailForm="ngForm">
+    <div class="form-group">
+      <label for="productCode">Product code: </label>
+      <input type="text" name="productCode" class="form-control" id="productCode" placeholder="productCode" [(ngModel)]="product.productCode">
+      <small id="productCodeHelpId" class="form-text text-muted">Product code is required</small>
+    </div>
+
+    <div class="form-group">
+      <label for="productName">Product name: </label>
+      <input type="text" class="form-control" name="productName" id="productName" placeholder="productName" [(ngModel)]="product.productName">
+      <small id="productNameHelpId" class="form-text text-muted">Product name is required</small>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+  </form>
+  <hr>
+
+  <p>{{ product | json }}</p>
+</div>
