@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../common/product'
+import { Product } from '../../common/product'
 
 
 @Component({
