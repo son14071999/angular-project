@@ -1,3 +1,4 @@
+import { LearnRoutes } from './routes/learn.routing';
 import { AdminRoutes } from './routes/admin.routing';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,6 +14,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
+import { SimpleFormCompComponent } from './learnComponents/simple-form-comp/simple-form-comp.component';
 
 const router: Routes = [
   // { path: '', redirectTo: '/home', pathMatch: 'null' },
@@ -35,7 +37,8 @@ const router: Routes = [
     DashboardComponent,
     NotFoundComponent,
     LoginComponent,
-    ProductAddComponent
+    ProductAddComponent,
+    SimpleFormCompComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ const router: Routes = [
     FormsModule,
     ReactiveFormsModule,
     AdminRoutes,
+    LearnRoutes,
     RouterModule.forRoot(router)
   ],
   providers: [],
