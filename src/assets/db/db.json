@@ -1,0 +1,12 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "clothes"
+    },
+    {
+      "id": 2,
+      "name": "suit"
+    }
+  ]
+}

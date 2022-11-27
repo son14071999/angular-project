@@ -15,6 +15,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
 import { SimpleFormCompComponent } from './learnComponents/simple-form-comp/simple-form-comp.component';
+import { CategoryAddComponent } from './components/category-add/category-add.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CategoryListComponent } from './components/category-list/category-list.component';
+import { CategoryEditComponent } from './components/category-edit/category-edit.component';
 
 const router: Routes = [
   // { path: '', redirectTo: '/home', pathMatch: 'null' },
@@ -38,7 +42,10 @@ const router: Routes = [
     NotFoundComponent,
     LoginComponent,
     ProductAddComponent,
-    SimpleFormCompComponent
+    SimpleFormCompComponent,
+    CategoryAddComponent,
+    CategoryListComponent,
+    CategoryEditComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +54,7 @@ const router: Routes = [
     ReactiveFormsModule,
     AdminRoutes,
     LearnRoutes,
+    HttpClientModule,
     RouterModule.forRoot(router)
   ],
   providers: [],

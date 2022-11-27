@@ -1,0 +1,30 @@
+<p>category-edit works!</p>
+<div class="row">
+    <div class="col">
+        <form action="">
+            <div class="card" *ngIf="category">
+                <div class="card-header">
+                    Add new category
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                      <label for="categoryId">Category id</label>
+                      <input type="text"
+                        class="form-control" name="categoryId" id="categoryId" aria-describedby="categoryHelpId" placeholder="categoryId" [(ngModel)]="category.id">
+                      <small id="categoryHelpId" class="form-text text-muted">Category sai dinh dang</small>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="categoryName">category name</label>
+                      <input type="text"
+                        class="form-control" name="categoryName" id="categoryName" aria-describedby="categoryHelpId" placeholder="categoryName" [(ngModel)]="category.name">
+                      <small id="categoryHelpId" class="form-text text-muted">Category name khong dung dinh dang</small>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <button class="btn btn-outline-primary" (click)="update()" type="button">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

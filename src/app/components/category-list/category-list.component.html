@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header">
+        List categories
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ctegory Id</th>
+                    <th>Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of categories">
+                    <td scope="row">{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>
+                        <div class="wrapper-icons">
+                            <a href=""><i class="fa-solid fa-eye"></i></a>
+                            <a [routerLink]="['/categoryEdit/' + item.id]"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a (click)="deleteCategory(item.id)"><i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        <a [routerLink]="['/categoryAdd']" class="btn btn-outline-primary">Add New Category</a>
+    </div>
+</div>
