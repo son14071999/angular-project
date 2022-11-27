@@ -11,12 +11,14 @@ import { StarComponent } from './components/star/star.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LoginComponent } from './components/login/login.component';
 
 const router: Routes = [
   // { path: '', redirectTo: '/home', pathMatch: 'null' },
   { path: 'productList', component: ProductListComponent },
   { path: 'productDetail', component: ProductDetailComponent },
   { path: 'productDetail/:id', component: ProductDetailComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'productList', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ]
@@ -29,7 +31,8 @@ const router: Routes = [
     ProductDetailComponent,
     StarComponent,
     DashboardComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
